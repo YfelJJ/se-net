@@ -1,0 +1,50 @@
+body,html{
+	margin: 0;
+	padding: 0;
+}
+#container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #3f3;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 2;
+}
+.contentPart{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.contentPart.first{
+	background-color: #f33;
+}
+
+.contentPart.second{
+	background-color: #33f;
+}
+
+.contentPart.third{
+	background-color: #f50;
+}
+
+.contentPart.forth{
+	background-color: #05f;
+}
+nav{
+	width: 210px;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	float: left;
+	position: fixed;
+	top: 0;
+	right: 210px;
+	z-index: 1;
+}
+nav ul li{
+	list-style-type: none;
+}
