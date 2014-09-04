@@ -34,39 +34,62 @@ body,html{
 .contentPart.forth{
 	background-color: #05f;
 }
-#showNav{
-	display: none;
-}
-#showNavThang{
-	position: absolute;
-	right: 20px;
-}
 nav{
 	background-color: #f1f1f1;
-	width: 210px;
-	float: left;
 	position: fixed;
-	top: 0;
-	z-index: 1;
-	height: 100%;
-	padding-left: 10px;
-	box-shadow: 1px 0 8px;
-	-webkit-transition:0.3s;
 }
 nav ul{
 	margin:0;
 	padding: 0;
-	right: 210px;
-
+	
 }
 nav ul li{
 	padding: 2px 0 3px 0;
 	font-size: 20px;
 	list-style-type: none;
+	-webkit-transition:0.3s;
+	cursor: pointer;
+	
 }
 nav ul li:hover{
 	padding: 2px 0 3px 5px;
 	border-left: 3px #005 solid;
-	-webkit-transition:0.3s;
-	
+}
+@media(max-width:500px){
+	#showNav{
+		display: none;
+	}
+	#showNavThang{
+		position: absolute;
+		right: 20px;
+	}
+	nav{
+		width: 210px;
+		float: left;
+		top: 0;
+		z-index: 1;
+		height: 100%;
+		padding-left: 10px;
+		box-shadow: 1px 0 8px;
+		-webkit-transition:0.3s;
+	}
+	nav ul{
+		right: 210px;
+
+	}
+}
+@media (min-width: 501px){
+	#showNavThang{
+		display: none;
+	}
+	nav{
+		top:0;
+		z-index: 1;
+		width: 100%;
+	}
+	nav ul li{
+		font-size: 20px;
+		display: inline-block;
+		margin: 6px 0 15px 30px;
+	}
 }
