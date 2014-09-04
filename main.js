@@ -20,14 +20,26 @@ function pageLoaded(){
 		console.log(Y + " en " + container.scrollTop);
 	},false);
 
-	showNav.addEventListener("change",function(){
+	showNav.addEventListener("change",reposition,false);
+	window.addEventListener("resize",function(){
+		windowWidth = window.innerWidth;
+		windowHeight = window.innerHeight;
+
+		if(windowWidth <= 500){
+			nav.style.left = "-180px";
+		}
+		else{
+			nav.style.left = "0px";
+		}
+
+	},false);
+
+	function reposition(){
 		if(showNav.checked){
 			nav.style.left = "-180px";
-
 		}else if(!showNav.checked){
 			nav.style.left = "0px";
-
-		}
-	},false);
+		}		
+	}
 
 }
