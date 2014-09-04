@@ -31,17 +31,19 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
-	<script src="main.js"></script>
 </head>
 <body>
 	<div id="container">
 		<nav>
+		<div id="showNavThang">
+			<input type="checkbox" id="showNav" value="true"/>
+			<label for="showNav">&#9776;</label> 
+		</div>
 			<ul>
-				<li class="menuItem first"> Ons bedrijf </li>
-				<li class="menuItem second"> Ons werk </li>
-				<li class="menuItem third"> contact </li>
-				<li class="menuItem forth"> click </li>
+				<li class="menuItem first" data-scroll="0"> Ons bedrijf </li>
+				<li class="menuItem second" data-scroll="1"> Ons werk </li>
+				<li class="menuItem third" data-scroll="2"> contact </li>
+				<li class="menuItem forth" data-scroll="3"> click </li>
 			</ul>
 		</nav>
 		<div class="contentPart first">
@@ -54,8 +56,11 @@
 
 		</div>
 		<div class="contentPart forth">
-
+			<!-- <form></form> -->
 		</div>
 	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
