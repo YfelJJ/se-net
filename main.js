@@ -15,10 +15,9 @@ function pageLoaded(){
 			$("#container").animate({scrollTop: Y});
 		},false);
 	}
-	window.addEventListener("resize",function(){
-		contentPartSize = container.height / amountOfContentParts;
-		console.log(Y + " en " + container.scrollTop);
-	},false);
+	// window.addEventListener("resize",function(){
+	// 	contentPartSize = container.height / amountOfContentParts;
+	// },false);
 
 	showNav.addEventListener("change",reposition,false);
 	window.addEventListener("resize",function(){
@@ -41,5 +40,9 @@ function pageLoaded(){
 			nav.style.left = "0px";
 		}		
 	}
+	container.addEventListener("scroll",function(){
+		// console.log(container.scrollTop);
+		console.log(parseInt(container.offsetHeight/amountOfContentParts));
+	},false);
 
 }
