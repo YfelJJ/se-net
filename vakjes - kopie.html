@@ -44,6 +44,23 @@
 				<img src="http://placehold.it/150x150" alt="myhead" />
 			</div>
 			<div class="name">
+				<h2>Klant</h2>
+				<p>Vormgever</p>
+			</div>
+			<div class="infoText">
+				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo </p>
+			</div>
+			<span class="showMoreInfo">Meer</span>
+		</div>
+		<div class="part">
+			<div class="image">
+				<img src="http://placehold.it/150x150" alt="myhead" />
+			</div>
+			<div class="name">
 				<h2>Henk</h2>
 				<p>Vormgever</p>
 			</div>
@@ -75,11 +92,15 @@
 		</div>
 	</div>
 	<style type="text/css">
+	body,html{
+		margin: 0;
+		padding: 0;
+	}
 	#aboutSection{
 		position: absolute;
 		background-color: #1a1a1a;
 		color: #e1e1e1;
-		padding: 5px;
+		padding-left: 5px;
 	}
 	.part{
 		/*border: 1px solid #99f;*/
@@ -102,18 +123,24 @@
 	<script type="text/javascript">
 		var meer = document.querySelectorAll(".showMoreInfo");
 		var infoText = document.querySelectorAll(".infoText");
+		var part = document.querySelectorAll(".part");
 		var aboutSection = document.getElementById("aboutSection");
 		var topPosition = aboutSection.offsetTop;
 		var closeButton;
+		var parent;
 		console.log(topPosition);
 		for(var i = 0; i < meer.length;i++){
 			infoText[i].style.webkitTransition = "0.5s";
 			meer[i].addEventListener("click",function(){
+				parent = this.parentNode
+				aboutSection.appendChild(parent);
+
+
 				this.style.display = "none";
 				this.parentNode.children[2].style.opacity = "1";
 				this.parentNode.children[2].style.height = "100%";
 				this.parentNode.children[2].style.position = "absolute";
-				this.parentNode.children[2].style.width = "760px";
+				this.parentNode.children[2].style.width = "1010px";
 				this.parentNode.children[2].style.left = "250px";
 				this.parentNode.children[2].style.top = "0px";
 				//close button
@@ -130,15 +157,15 @@
 		}
 		function resetStyle(){
 				for(var j = 0;j<infoText.length;j++){
-					infoText[j].style.webkitTransition = "0s";
+						// infoText[j].style.webkitTransition = "0.5s";
 					infoText[j].style.opacity = "";
 					infoText[j].style.height = "";
 					infoText[j].style.position = "";
 					infoText[j].style.width = "";
 					infoText[j].style.top = "";
 					infoText[j].style.display = "";
+					infoText[j].style.webkitTransition = "0s";
 					// window.setTimeout(function(){
-						infoText[j].style.webkitTransition = "0.5s";
 					// },25);
 				}
 				for(var i = 0; i < meer.length;i++){
