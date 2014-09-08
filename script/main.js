@@ -70,4 +70,24 @@ function pageLoaded(){
 	$('#logo').click(function(){
 		$('#logo').css({"backgroundImage":"url('images/logo_white.png')"});
 	});
+	// if(!$('#logo').css({"backgroundImage":"url('images/logo_white.png')"})){
+	// $('#logo').mouseover(function(){
+	// 	$('#nav').append("<div id='logo_over'></div>");
+	// });
+
+	// }
+	// $('#logo').mouseleave(function(){
+	// 	$('#logo_over').remove();
+	// });
+
+	function bindEvent(e, eventName, callback) {
+    if(e.addEventListener) // new browsers
+        e.addEventListener(eventName, callback, false);
+    else if(e.attachEvent) // IE
+        e.attachEvent('on'+ eventName, callback);
+	};
+
+	bindEvent(document.body, 'scroll', function(e) {
+    	document.body.scrollLeft = 0;
+	});
 }
