@@ -108,11 +108,9 @@ nav ul li:active{
 	cursor: pointer;
 	-webkit-transition:1.2s all ease-in-out;
 }
-/*1366 Resolutie*/
-@media(max-width:1367px){
 	#purple{
 		position: absolute;
-		top:-90%;
+		top:-600px;
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
@@ -125,7 +123,7 @@ nav ul li:active{
 	}
 	#blue{
 		position: absolute;
-		top:90%;
+		bottom:-650px;
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
@@ -141,7 +139,7 @@ nav ul li:active{
 		top:0px;
 		margin-left: auto;
 		margin-right: auto;
-		left: 70%;
+		left: 920px;
 		right: 0;
 		width: 700px;
 		height: 700px;
@@ -154,16 +152,15 @@ nav ul li:active{
 		top:0px;
 		margin-left: auto;
 		margin-right: auto;
-		right: 70%;
+		right: 920px;
 		width: 700px;
 		height: 700px;
 		background-image: url("../images/groen.png");
 		background-size: 100% 100%;
 		-webkit-transform:rotate(-45deg);
 	}
-}
 /*1920 Resolutie*/
-@media(max-width:1921px){
+@media(min-width:1367 and max-width:1921px){
 	#purple{
 		top:-600px;
 		left: 0;
