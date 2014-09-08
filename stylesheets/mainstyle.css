@@ -162,23 +162,23 @@ nav ul li:active{
 /*1920 Resolutie*/
 @media(min-width:1367 and max-width:1921px){
 	#purple{
-		top:-600px;
+		top:-500px;
 		left: 0;
 		right: 0;
 	}
 	#blue{
-		top:600px;
+		top:500px;
 		left: 0;
 		right: 0;
 	}
 	#orange{
 		top:0px;
-		left: 400px;
+		left: 200px;
 		right: 0;
 	}
 	#green{
 		top:0px;
-		right: 1200px;
+		right: 200px;
 	}
 }
 @media(max-width:500px){
