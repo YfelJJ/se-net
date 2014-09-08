@@ -1,6 +1,7 @@
 window.addEventListener("load",pageLoaded,false);
 function pageLoaded(){
 	var container = document.getElementById("container");
+	var logo = document.getElementById("logo");
 	var contentPart = document.querySelectorAll(".menuItem");
 	var showNav = document.getElementById("showNav");
 	var nav = document.getElementsByTagName("NAV")[0];
@@ -15,6 +16,10 @@ function pageLoaded(){
 			$("#container").animate({scrollTop: Y});
 		},false);
 	}
+
+	logo.addEventListener("click", function(){
+		$("#container").animate({scrollTop: 0});
+	});
 	// window.addEventListener("resize",function(){
 	// 	contentPartSize = container.height / amountOfContentParts;
 	// },false);
@@ -45,4 +50,12 @@ function pageLoaded(){
 		console.log(parseInt(container.offsetHeight/amountOfContentParts));
 	},false);
 
+	var knoppies = document.querySelectorAll(".menuItem");
+
+	for(var i = 0;i<knoppies.length;i++){
+		knoppies[i].addEventListener("click",function(){
+			console.log(this.dataset.kleur);
+			nav.style.background = this.dataset.kleur;
+		},false);
+	}
 }

@@ -20,6 +20,7 @@
   ================================================== -->
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/mainstyle.css">
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,15 +36,16 @@
 <body>
 	<div id="container">
 		<nav>
+		<div id="logo"></div>
 		<div id="showNavThang">
 			<input type="checkbox" id="showNav" value="true"/>
 			<label for="showNav">&#9776;</label> 
 		</div>
 			<ul>
-				<li class="menuItem first" data-scroll="0"> Ons bedrijf </li>
-				<li class="menuItem second" data-scroll="1"> Ons werk </li>
-				<li class="menuItem third" data-scroll="2"> contact </li>
-				<li class="menuItem forth" data-scroll="3"> click </li>
+				<li class="menuItem first" data-scroll="0" data-kleur=""> Ons Bedrijf </li>
+				<li class="menuItem second" data-scroll="1" data-kleur=""> Ons Werk </li>
+				<li class="menuItem third" data-scroll="2" data-kleur=""> Contact </li>
+				<!-- <li class="menuItem forth" data-scroll="3" data-kleur="#f50"> Click </li> -->
 			</ul>
 		</nav>
 		<div class="contentPart first">
@@ -55,9 +57,9 @@
 		<div class="contentPart third">
 
 		</div>
-		<div class="contentPart forth">
-			<!-- <form></form> -->
-		</div>
+		<!-- <div class="contentPart forth">
+			
+		</div> -->
 	</div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="script/jquery.smoothwheel.js"></script>

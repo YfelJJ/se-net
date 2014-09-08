@@ -12,6 +12,7 @@ body,html{
 	width: 100%;
 	height: 100%;
 	overflow: auto;
+	overflow: hidden;
 	z-index: 2;
 	-webkit-overflow-scrolling: touch;
 	/*-webkit-transition:0.2s;*/
@@ -23,25 +24,45 @@ body,html{
 }
 
 .contentPart.first{
-	background-color: #f33;
+	background-color: #EEEEEE;
+	border-bottom:1px solid   rgba(190, 190, 190, 0.5);
 }
 
 .contentPart.second{
-	background-color: #33f;
+	background-color: #E6E6E6;
+	border-bottom:1px solid   rgba(190, 190, 190, 0.5);
 }
 
 .contentPart.third{
-	background-color: #f50;
+	background-color: #DEDEDE;
 }
 
 .contentPart.forth{
 	background-color: #05f;
 }
 nav{
-	background-color: #f1f1f1;
+	background-color: #000;
+	color:white;
 	position: fixed;
+	height: 70px;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	-webkit-transition:all 1s ease;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    2px 4px 14px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         2px 4px 14px 0px rgba(0, 0, 0, 0.75);
 }
 nav ul{
+	position: absolute;
+	right: 10%;
+	top:15px;
 	margin:0;
 	padding: 0;
 	
@@ -50,13 +71,28 @@ nav ul li{
 	padding: 2px 0 3px 0;
 	font-size: 20px;
 	list-style-type: none;
-	-webkit-transition:0.3s;
+	-webkit-transition:0.3s ease-in-out;
 	cursor: pointer;
 	
 }
 nav ul li:hover{
-	padding: 2px 0 3px 5px;
-	border-left: 3px #005 solid;
+	padding: 2px 6px 3px 5px;
+	/*border-left: 2px #005 solid;
+	border-top: 2px #005 solid;*/
+	box-shadow: 2px 2px 1px 0px rgba(0, 5, 0, 0.75);;
+}
+nav ul li:active{
+	padding: 2px 6px 3px 3px;
+	box-shadow: 2px 2px 1px 0px rgba(0, 5, 0, 0.40);
+}
+#logo{
+	position: absolute;
+	width: 20%;
+	left:10%;
+	height: 90%;
+	background-image: url("../images/logo_white.png");
+	background-size: 100% 100%;
+	cursor: pointer;
 }
 @media(max-width:500px){
 	#showNav{
