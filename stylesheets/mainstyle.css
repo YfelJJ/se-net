@@ -108,56 +108,81 @@ nav ul li:active{
 	cursor: pointer;
 	-webkit-transition:1.2s all ease-in-out;
 }
-#purple{
-	position: absolute;
-	top:-90%;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	width: 700px;
-	height: 700px;
-	background-image: url("../images/paars.png");
-	background-size: 100% 100%;
-	-webkit-transform:rotate(-45deg);
+/*1366 Resolutie*/
+@media(max-width:1367px){
+	#purple{
+		position: absolute;
+		top:-90%;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/paars.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#blue{
+		position: absolute;
+		top:90%;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/blauw.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#orange{
+		position: absolute;
+		top:0px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 70%;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/oranje.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#green{
+		position: absolute;
+		top:0px;
+		margin-left: auto;
+		margin-right: auto;
+		right: 70%;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/groen.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
 }
-#blue{
-	position: absolute;
-	top:90%;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	width: 700px;
-	height: 700px;
-	background-image: url("../images/blauw.png");
-	background-size: 100% 100%;
-	-webkit-transform:rotate(-45deg);
-}
-#orange{
-	position: absolute;
-	top:0px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 70%;
-	right: 0;
-	width: 700px;
-	height: 700px;
-	background-image: url("../images/oranje.png");
-	background-size: 100% 100%;
-	-webkit-transform:rotate(-45deg);
-}
-#green{
-	position: absolute;
-	top:0px;
-	margin-left: auto;
-	margin-right: auto;
-	right: 70%;
-	width: 700px;
-	height: 700px;
-	background-image: url("../images/groen.png");
-	background-size: 100% 100%;
-	-webkit-transform:rotate(-45deg);
+/*1920 Resolutie*/
+@media(max-width:1921px){
+	#purple{
+		top:-600px;
+		left: 0;
+		right: 0;
+	}
+	#blue{
+		top:600px;
+		left: 0;
+		right: 0;
+	}
+	#orange{
+		top:0px;
+		left: 400px;
+		right: 0;
+	}
+	#green{
+		top:0px;
+		right: 1200px;
+	}
 }
 @media(max-width:500px){
 	#showNav{
