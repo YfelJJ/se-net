@@ -58,4 +58,16 @@ function pageLoaded(){
 			nav.style.background = this.dataset.kleur;
 		},false);
 	}
+	$('.first').click(function(){
+		$('#logo').css({"backgroundImage":"url('images/logo_1.png')"});
+	});
+	$('.second').click(function(){
+		$('#logo').css({"backgroundImage":"url('images/logo_2.png')"});
+	});
+	$('.third').click(function(){
+		$('#logo').css({"backgroundImage":"url('images/logo_3.png')"});
+	});
+	$('#logo').click(function(){
+		$('#logo').css({"backgroundImage":"url('images/logo_white.png')"});
+	});
 }

@@ -61,7 +61,7 @@ nav{
 }
 nav ul{
 	position: absolute;
-	right: 10%;
+	right: 20%;
 	top:15px;
 	margin:0;
 	padding: 0;
@@ -88,11 +88,12 @@ nav ul li:active{
 #logo{
 	position: absolute;
 	width: 20%;
-	left:10%;
+	left:20%;
 	height: 90%;
 	background-image: url("../images/logo_white.png");
 	background-size: 100% 100%;
 	cursor: pointer;
+	-webkit-transition:1.2s all ease-in-out;
 }
 @media(max-width:500px){
 	#showNav{
