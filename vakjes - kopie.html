@@ -4,14 +4,15 @@
 	<title></title>
 </head>
 <body>
+	<h1>Hallo</h1>
 	<div id="aboutSection">
 		<div class="part">
+			<div class="name">
+				<h2>Naam een</h2>
+				<p>Vormgever</p>
+			</div>
 			<div class="image">
 				<img src="http://placehold.it/150x150" alt="myhead" />
-			</div>
-			<div class="name">
-				<h2>Henk</h2>
-				<p>Vormgever</p>
 			</div>
 			<div class="infoText">
 				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
@@ -20,15 +21,15 @@
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo </p>
 			</div>
-			<span class="showMoreInfo">Meer</span>
+			<span class="showMoreInfo" data-position="first">Meer</span>
 		</div>
 		<div class="part">
-			<div class="image">
-				<img src="http://placehold.it/150x150" alt="myhead" />
-			</div>
 			<div class="name">
 				<h2>Henk</h2>
 				<p>Vormgever</p>
+			</div>
+			<div class="image">
+				<img src="http://placehold.it/150x150" alt="myhead" />
 			</div>
 			<div class="infoText">
 				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
@@ -37,16 +38,16 @@
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo </p>
 			</div>
-			<span class="showMoreInfo">Meer</span>
+			<span class="showMoreInfo" data-position="last">Meer</span>
 		</div>
 		<div class="part">
-			<div class="image">
-				<img src="http://placehold.it/150x150" alt="myhead" />
-			</div>
 			<div class="name">
 				<h2>Klant</h2>
 				<p>Vormgever</p>
 			</div>
+			<div class="image">
+				<img src="http://placehold.it/150x150" alt="myhead" />
+			</div>
 			<div class="infoText">
 				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
@@ -54,33 +55,33 @@
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo </p>
 			</div>
-			<span class="showMoreInfo">Meer</span>
+			<span class="showMoreInfo" data-position="last">Meer</span>
 		</div>
 		<div class="part">
+			<div class="name">
+				<h2>Piet</h2>
+				<p>Vormgever</p>
+			</div>
 			<div class="image">
 				<img src="http://placehold.it/150x150" alt="myhead" />
 			</div>
+			<div class="infoText">
+				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
+				 hal lo  hal lo  hal lo </p>
+			</div>
+			<span class="showMoreInfo" data-position="last">Meer</span>
+		</div>
+		<div class="part">
 			<div class="name">
 				<h2>Henk</h2>
 				<p>Vormgever</p>
 			</div>
-			<div class="infoText">
-				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
-				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
-				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
-				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
-				 hal lo  hal lo  hal lo </p>
-			</div>
-			<span class="showMoreInfo">Meer</span>
-		</div>
-		<div class="part">
 			<div class="image">
 				<img src="http://placehold.it/150x150" alt="myhead" />
 			</div>
-			<div class="name">
-				<h2>Henk</h2>
-				<p>Vormgever</p>
-			</div>
 			<div class="infoText">
 				<p> hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
@@ -88,7 +89,7 @@
 				 hal lo  hal lo  hal lo  hal lo  hal lo  hal lo 
 				 hal lo  hal lo  hal lo </p>
 			</div>
-			<span class="showMoreInfo">Meer</span>
+			<span class="showMoreInfo" data-position="last">Meer</span>
 		</div>
 	</div>
 	<style type="text/css">
@@ -98,18 +99,20 @@
 	}
 	#aboutSection{
 		position: absolute;
-		background-color: #1a1a1a;
+		/*background-color: #1a1a1a;*/
 		color: #e1e1e1;
 		padding-left: 5px;
+		/*overflow: auto;*/
 	}
 	.part{
-		/*border: 1px solid #99f;*/
+		background-color: #1a1a1a;
 		display: inline-block;
 		width: 250px;
 		display: table-cell;
 		height: 500px;
 	}
 	.image img{
+		margin-top:15px; 
 		border-radius: 100%;
 	}
 	.infoText{
@@ -127,36 +130,56 @@
 		var aboutSection = document.getElementById("aboutSection");
 		var topPosition = aboutSection.offsetTop;
 		var closeButton;
-		var parent;
+		var firstDiv;
+
 		console.log(topPosition);
 		for(var i = 0; i < meer.length;i++){
 			infoText[i].style.webkitTransition = "0.5s";
 			meer[i].addEventListener("click",function(){
-				parent = this.parentNode
-				aboutSection.appendChild(parent);
+				if(this.dataset.position != "first"){
+
+					firstDiv = document.createElement("div");
+					firstDiv.innerHTML = this.parentNode.innerHTML;
+					firstDiv.style.position = "absolute"; 
+					firstDiv.style.top = "0px";
+					firstDiv.style.height = "100%";
+					firstDiv.id = "first";
+					firstDiv.style.backgroundColor = "rgb(26,26,26)";
+					part[0].style.visibility="hidden";
+					aboutSection.appendChild(firstDiv);
+				}
 
 
 				this.style.display = "none";
 				this.parentNode.children[2].style.opacity = "1";
 				this.parentNode.children[2].style.height = "100%";
 				this.parentNode.children[2].style.position = "absolute";
-				this.parentNode.children[2].style.width = "1010px";
-				this.parentNode.children[2].style.left = "250px";
+				this.parentNode.children[2].style.width = "1000px";
+				this.parentNode.children[2].style.left = "255px";
 				this.parentNode.children[2].style.top = "0px";
 				//close button
 				closeButton = document.createElement("img");
-				closeButton.src = "http://placehold.it/30x30";
+				closeButton.src = "images/icons/close.png";
+				// console.log("hallo")
 
 
 				this.parentNode.children[2].appendChild(closeButton);
 				closeButton.style.position = "absolute";
 				closeButton.style.top = "0px";
 				closeButton.style.right = "0px";
+				closeButton.style.height = "30px";
+				closeButton.style.width = "30px";
 				closeButton.addEventListener("click",resetStyle,false);
 			},false);
 		}
 		function resetStyle(){
+			try{
+				document.getElementById("first").remove();
+			}catch(e){
+				console.log("de eerste");
+			}
 				for(var j = 0;j<infoText.length;j++){
+					part[0].style.visibility="";
 						// infoText[j].style.webkitTransition = "0.5s";
 					infoText[j].style.opacity = "";
 					infoText[j].style.height = "";
@@ -165,6 +188,7 @@
 					infoText[j].style.top = "";
 					infoText[j].style.display = "";
 					infoText[j].style.webkitTransition = "0s";
+					console.log("hallo")
 					// window.setTimeout(function(){
 					// },25);
 				}
