@@ -54,7 +54,6 @@ function pageLoaded(){
 
 	for(var i = 0;i<knoppies.length;i++){
 		knoppies[i].addEventListener("click",function(){
-			console.log(this.dataset.kleur);
 			nav.style.background = this.dataset.kleur;
 		},false);
 	}

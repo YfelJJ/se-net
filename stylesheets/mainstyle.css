@@ -3,19 +3,28 @@ body,html{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: auto;
-	overflow-x: hidden;
+	overflow: hidden;
+	overflow-x:hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	/*-webkit-overflow-scrolling: touch;*/
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 #container{
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-color: #3f3;
+	overflow: auto;
+	overflow-x:hidden;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
-	overflow-x: hidden;
 	z-index: 2;
 	/*-webkit-overflow-scrolling: touch;*/
 	/*-webkit-transition:0.2s;*/
@@ -37,7 +46,10 @@ body,html{
 }
 
 .contentPart.third{
-	background-color: #DEDEDE;
+	background-color: #1c1c1c;
+	overflow: hidden;
+	color:white;
+	/*background-color: #e1e1e1;*/
 }
 
 .contentPart.forth{
@@ -97,6 +109,7 @@ nav ul li:active{
 	background-size: 100% 100%;
 	cursor: pointer;
 	-webkit-transition:1.2s all ease-in-out;
+	-moz-transition:1.2s all ease-in-out;
 }
 #logo_over{
 	position: absolute;
@@ -107,6 +120,7 @@ nav ul li:active{
 	background-size: 100% 100%;
 	cursor: pointer;
 	-webkit-transition:1.2s all ease-in-out;
+	-moz-transition:1.2s all ease-in-out;
 }
 	#purple{
 		position: absolute;
@@ -159,6 +173,169 @@ nav ul li:active{
 		background-size: 100% 100%;
 		-webkit-transform:rotate(-45deg);
 	}
+	#mapsImg{
+		border-radius: 30px;
+		width: 400px;
+		height: 200px;
+	}
+	#contactForm{
+		position: absolute;
+		width: 50%;
+		display: inline-block;
+		margin:0 auto;
+		margin-left:270px;
+		top:120px;
+	}
+	#contactForm form{
+		margin-top:20px;
+	}
+	#contactForm h2{
+		padding:0;
+		margin:0;
+		padding-bottom:10px;
+		font-family: 'Alegreya Sans SC', sans-serif;
+	}
+	#contactForm p{
+		padding:0;
+		margin:0;
+		padding-left:10px;
+	}
+	#contactForm input[type=text]{
+		border-radius: 15px;
+		padding-left:8px;
+		height: 20px;
+	}
+	#contactForm input, textarea{
+		margin-top:12px;
+		font-size:14px;
+	}
+	#contactForm textarea{
+		/*height: 150px;
+		width: 300px;*/
+		border-radius: 15px;
+		padding-left:8px;
+	}
+	textarea:focus, input:focus{
+    	outline: 0;
+	}
+	#contactForm .inputText{
+		font-family: 'Alegreya Sans SC', sans-serif;
+	}
+	#maps{
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top:120px;
+	}
+	#maps p{
+		padding:0;
+		margin:0;
+		padding-left:10px;
+	}
+	#maps .padTop{
+		padding-top:10px;
+	}
+	#maps .padLeft{
+		padding-left:20px;
+		padding-bottom: 20px;
+	}
+	#maps .padBottom{
+		padding-left:20px;
+		padding-bottom:20px;
+	}
+	#maps a{
+		padding-left:10px;
+	}
+	.cancelButton {
+		-moz-box-shadow:inset 0px 1px 0px 0px #590700;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #590700;
+		box-shadow:inset 0px 1px 0px 0px #590700;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ad0d02), color-stop(1, #bf291b) );
+		background:-moz-linear-gradient( center top, #ad0d02 5%, #bf291b 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ad0d02', endColorstr='#bf291b');
+		background-color:#ad0d02;
+		-webkit-border-top-left-radius:28px;
+		-moz-border-radius-topleft:28px;
+		border-top-left-radius:28px;
+		-webkit-border-top-right-radius:28px;
+		-moz-border-radius-topright:28px;
+		border-top-right-radius:28px;
+		-webkit-border-bottom-right-radius:28px;
+		-moz-border-radius-bottomright:28px;
+		border-bottom-right-radius:28px;
+		-webkit-border-bottom-left-radius:28px;
+		-moz-border-radius-bottomleft:28px;
+		border-bottom-left-radius:28px;
+		text-indent:0;
+		border:0px solid #d02718;
+		display:inline-block;
+		color:#000000;
+		font-family:Arial;
+		font-size:16px;
+		font-weight:600;
+		font-style:normal;
+		height:50px;
+		line-height:50px;
+		width:159px;
+		text-decoration:none;
+		text-align:center;
+	}
+	.cancelButton:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bf291b), color-stop(1, #ad0d02) );
+		background:-moz-linear-gradient( center top, #bf291b 5%, #ad0d02 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf291b', endColorstr='#ad0d02');
+		background-color:#bf291b;
+	}
+	.cancelButton:active {
+		position:relative;
+		top:1px;
+	}
+	.sendButton {
+		margin-left: 20px;
+		-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+		box-shadow:inset 0px 1px 0px 0px #caefab;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #43db2c), color-stop(1, #20b812) );
+		background:-moz-linear-gradient( center top, #43db2c 5%, #20b812 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#43db2c', endColorstr='#20b812');
+		background-color:#43db2c;
+		-webkit-border-top-left-radius:28px;
+		-moz-border-radius-topleft:28px;
+		border-top-left-radius:28px;
+		-webkit-border-top-right-radius:28px;
+		-moz-border-radius-topright:28px;
+		border-top-right-radius:28px;
+		-webkit-border-bottom-right-radius:28px;
+		-moz-border-radius-bottomright:28px;
+		border-bottom-right-radius:28px;
+		-webkit-border-bottom-left-radius:28px;
+		-moz-border-radius-bottomleft:28px;
+		border-bottom-left-radius:28px;
+		text-indent:0;
+		border:1px solid #26ff00;
+		display:inline-block;
+		color:#000000;
+		font-family:Arial;
+		font-size:16px;
+		font-weight:600;
+		font-style:normal;
+		height:50px;
+		line-height:50px;
+		width:159px;
+		text-decoration:none;
+		text-align:center;
+	}
+	.sendButton:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #20b812), color-stop(1, #43db2c) );
+		background:-moz-linear-gradient( center top, #20b812 5%, #43db2c 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#20b812', endColorstr='#43db2c');
+		background-color:#20b812;
+	}
+	.sendButton:active {
+		position:relative;
+		top:1px;
+	}
 /*1920 Resolutie*/
 @media(min-width:1367 and max-width:1921px){
 	#purple{
@@ -198,6 +375,7 @@ nav ul li:active{
 		padding-left: 10px;
 		box-shadow: 1px 0 8px;
 		-webkit-transition:0.3s;
+		-moz-transition:0.3s;
 	}
 	nav ul{
 		right: 210px;
