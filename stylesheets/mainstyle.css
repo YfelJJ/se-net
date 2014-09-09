@@ -3,28 +3,20 @@ body,html{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	overflow-x:hidden;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	overflow: auto;
+	overflow-x: hidden;
 	/*-webkit-overflow-scrolling: touch;*/
-}
-::-webkit-scrollbar { 
-    display: none; 
 }
 #container{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: #3f3;
-	overflow: auto;
-	overflow-x:hidden;
+	background-color:#f1f1f1;
+	/*background-color: #3f3;*/
 	width: 100%;
 	height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
 	z-index: 2;
 	/*-webkit-overflow-scrolling: touch;*/
 	/*-webkit-transition:0.2s;*/
@@ -36,40 +28,90 @@ body,html{
 }
 
 .contentPart.first{
-	background-color: #EEEEEE;
+	/*background-color: #EEEEEE;*/
 	background-image: url("../images/background.png");
-<<<<<<< HEAD
 	background-size: 100% 100%;
-=======
->>>>>>> origin/master
-	border-bottom:1px solid   rgba(190, 190, 190, 0.5);
-	background-size: 100% 100%;
+	/*border-bottom:1px solid   rgba(190, 190, 190, 0.5);*/
+}
+#introText{
+   width: 33.33%;
+    height: 33.33%;
+    text-align: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .contentPart.second{
-	background-color: #E6E6E6;
+	/*background-color: #E6E6E6;*/
 	border-bottom:1px solid   rgba(190, 190, 190, 0.5);
 }
-
-.contentPart.third{
+.third{
 	background-color: #1c1c1c;
 	overflow: hidden;
 	color:white;
+	max-height: 640px;
 	/*background-color: #e1e1e1;*/
 }
+#people,#portfolio{
+	background-color: #1f1f1f;
+	width: 1016px;
+	margin: 0 auto;
+	margin-top:50px; 
+	margin-bottom:50px; 
+}
+.faceImage{
+	padding-top: 40px;
+	margin: 0 auto;
+	width: 160px;
+	padding-bottom: 50px;
+}
+.faceImage img{
+	border-radius: 100%;
 
-.contentPart.forth{
-	background-color: #05f;
+}
+#people .person,#portfolio .exampleProject{
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;	
+}
+#portfolio .exampleProject{
+	width: 336px;
+}
+#people .person.client{
+	background-color: #0099cc;
+}
+.names{
+	color: #c1c1c1;
+}
+.nameLabel{
+	position: absolute;
+	/*overflow: auto;*/
+	width: inherit;
+	height: 100px;
+	background-color: rgba(0,0,0,0.5);
+}
+#subPart{
+	padding: 25px 0 13px 0;
+	background-color: #c1c1c1;
+	width: 100%;
+
 }
 nav{
 	background-color: #000;
 	color:white;
-	position: fixed;
+	position: absolute;
+	/*position: fixed;*/
 	height: 70px;
 	display: table-cell;
 	vertical-align: middle;
 	font-family: 'Alegreya Sans SC', sans-serif;
-	-webkit-transition:all 1s ease;
+	/*-webkit-transition:all 1s ease;*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -92,7 +134,7 @@ nav ul li{
 	padding: 2px 0 3px 0;
 	font-size: 20px;
 	list-style-type: none;
-	-webkit-transition:0.3s ease-in-out;
+	/*-webkit-transition:0.3s ease-in-out;*/
 	cursor: pointer;
 	
 }
@@ -114,8 +156,7 @@ nav ul li:active{
 	background-image: url("../images/logo_white.png");
 	background-size: 100% 100%;
 	cursor: pointer;
-	-webkit-transition:1.2s all ease-in-out;
-	-moz-transition:1.2s all ease-in-out;
+	/*-webkit-transition:1.2s all ease-in-out;*/
 }
 #logo_over{
 	position: absolute;
@@ -125,60 +166,8 @@ nav ul li:active{
 	background-image: url("../images/logo_white.png");
 	background-size: 100% 100%;
 	cursor: pointer;
-	-webkit-transition:1.2s all ease-in-out;
-	-moz-transition:1.2s all ease-in-out;
+	/*-webkit-transition:1.2s all ease-in-out;*/
 }
-	#purple{
-		position: absolute;
-		top:-600px;
-		margin-left: auto;
-		margin-right: auto;
-		left: 0;
-		right: 0;
-		width: 700px;
-		height: 700px;
-		background-image: url("../images/paars.png");
-		background-size: 100% 100%;
-		-webkit-transform:rotate(-45deg);
-	}
-	#blue{
-		position: absolute;
-		bottom:-650px;
-		margin-left: auto;
-		margin-right: auto;
-		left: 0;
-		right: 0;
-		width: 700px;
-		height: 700px;
-		background-image: url("../images/blauw.png");
-		background-size: 100% 100%;
-		-webkit-transform:rotate(-45deg);
-	}
-	#orange{
-		position: absolute;
-		top:0px;
-		margin-left: auto;
-		margin-right: auto;
-		left: 920px;
-		right: 0;
-		width: 700px;
-		height: 700px;
-		background-image: url("../images/oranje.png");
-		background-size: 100% 100%;
-		-webkit-transform:rotate(-45deg);
-	}
-	#green{
-		position: absolute;
-		top:0px;
-		margin-left: auto;
-		margin-right: auto;
-		right: 920px;
-		width: 700px;
-		height: 700px;
-		background-image: url("../images/groen.png");
-		background-size: 100% 100%;
-		-webkit-transform:rotate(-45deg);
-	}
 	#mapsImg{
 		border-radius: 30px;
 		width: 400px;
@@ -342,26 +331,80 @@ nav ul li:active{
 		position:relative;
 		top:1px;
 	}
-/*1920 Resolutie*/
-@media(min-width:1367 and max-width:1921px){
+/*1366 Resolutie*/
+@media(max-width:1367px){
 	#purple{
-		top:-500px;
+		position: absolute;
+		top:-90%;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/paars.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#blue{
+		position: absolute;
+		top:90%;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/blauw.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#orange{
+		position: absolute;
+		top:0px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 70%;
+		right: 0;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/oranje.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+	#green{
+		position: absolute;
+		top:0px;
+		margin-left: auto;
+		margin-right: auto;
+		right: 70%;
+		width: 700px;
+		height: 700px;
+		background-image: url("../images/groen.png");
+		background-size: 100% 100%;
+		-webkit-transform:rotate(-45deg);
+	}
+}
+/*1920 Resolutie*/
+@media(max-width:1921px){
+	#purple{
+		top:-600px;
 		left: 0;
 		right: 0;
 	}
 	#blue{
-		top:500px;
+		top:600px;
 		left: 0;
 		right: 0;
 	}
 	#orange{
 		top:0px;
-		left: 200px;
+		left: 400px;
 		right: 0;
 	}
 	#green{
 		top:0px;
-		right: 200px;
+		right: 1200px;
 	}
 }
 @media(max-width:500px){
@@ -380,8 +423,7 @@ nav ul li:active{
 		height: 100%;
 		padding-left: 10px;
 		box-shadow: 1px 0 8px;
-		-webkit-transition:0.3s;
-		-moz-transition:0.3s;
+		/*-webkit-transition:0.3s;*/
 	}
 	nav ul{
 		right: 210px;
