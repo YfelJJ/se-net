@@ -47,9 +47,10 @@ body,html{
 
 .contentPart.second{
 	/*background-color: #E6E6E6;*/
+	height: 885px;
 	border-bottom:1px solid   rgba(190, 190, 190, 0.5);
 }
-.third{
+.contentPart.third{
 	background-color: #1c1c1c;
 	overflow: hidden;
 	color:white;
@@ -105,8 +106,8 @@ body,html{
 nav{
 	background-color: #000;
 	color:white;
-	position: absolute;
-	/*position: fixed;*/
+	/*position: absolute;*/
+	position: fixed;
 	height: 70px;
 	display: table-cell;
 	vertical-align: middle;
@@ -118,9 +119,9 @@ nav{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	-webkit-box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow:    2px 4px 14px 0px rgba(0, 0, 0, 0.75);
-	box-shadow:         2px 4px 14px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -4px 4px 14px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    -4px 4px 14px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         -4px 4px 14px 0px rgba(0, 0, 0, 0.75);
 }
 nav ul{
 	position: absolute;
@@ -134,7 +135,6 @@ nav ul li{
 	padding: 2px 0 3px 0;
 	font-size: 20px;
 	list-style-type: none;
-	/*-webkit-transition:0.3s ease-in-out;*/
 	cursor: pointer;
 	
 }
@@ -150,7 +150,7 @@ nav ul li:active{
 }
 #logo{
 	position: absolute;
-	width: 20%;
+	width: 19%;
 	left:20%;
 	height: 90%;
 	background-image: url("../images/logo_white.png");
@@ -160,7 +160,7 @@ nav ul li:active{
 }
 #logo_over{
 	position: absolute;
-	width: 20%;
+	width: 10%;
 	left:20%;
 	height: 90%;
 	background-image: url("../images/logo_white.png");
@@ -218,7 +218,7 @@ nav ul li:active{
 	}
 	#maps{
 		width: 50%;
-		height: 100%;
+		/*height: 100%;*/
 		position: absolute;
 		right: 0;
 		top:120px;
