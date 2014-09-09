@@ -3,16 +3,32 @@ body,html{
 	height: 100%;
 	margin: 0;
 	padding: 0;
+<<<<<<< HEAD
 	overflow: auto;
 	overflow-x: hidden;
+=======
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+>>>>>>> origin/master
 	/*-webkit-overflow-scrolling: touch;*/
 }
 #container{
 	position: absolute;
 	top: 0;
 	left: 0;
+<<<<<<< HEAD
 	background-color:#f1f1f1;
 	/*background-color: #3f3;*/
+=======
+	background-color: #3f3;
+	overflow-y: scroll;
+ overflow-x: hidden;
+>>>>>>> origin/master
 	width: 100%;
 	height: 100%;
 	overflow: auto;
