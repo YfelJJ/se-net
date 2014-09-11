@@ -112,7 +112,11 @@ body,html{
 nav{
 	background-color: #000;
 	color:white;
+<<<<<<< HEAD
 	z-index: 1;
+=======
+	z-index: 2;
+>>>>>>> origin/master
 	/*position: absolute;*/
 	position: fixed;
 	height: 70px;
