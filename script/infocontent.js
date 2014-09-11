@@ -1,6 +1,6 @@
 		var meer = document.querySelectorAll(".showMoreInfo");
 		var infoText = document.querySelectorAll(".infoText");
-		var person = document.querySelectorAll(".person");
+		var part = document.querySelectorAll(".part");
 		var aboutSection = document.getElementById("aboutSection");
 		var topPosition = aboutSection.offsetTop;
 		var closeButton;
@@ -19,7 +19,7 @@
 					firstDiv.style.height = "100%";
 					firstDiv.id = "first";
 					firstDiv.style.backgroundColor = "rgb(26,26,26)";
-					person[0].style.visibility="hidden";
+					part[0].style.visibility="hidden";
 					aboutSection.appendChild(firstDiv);
 				}
 
@@ -53,7 +53,7 @@
 				console.log("de eerste");
 			}
 				for(var j = 0;j<infoText.length;j++){
-					person[0].style.visibility="";
+					part[0].style.visibility="";
 						// infoText[j].style.webkitTransition = "0.5s";
 					infoText[j].style.opacity = "";
 					infoText[j].style.height = "";

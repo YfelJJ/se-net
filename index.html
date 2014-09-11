@@ -62,31 +62,31 @@
 		<div class="contentPart second">
 			<div id="people">
 				<div class="person">
-					<div class="faceImage" data-person="0">
+					<div class="faceImage">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
 					<p class="names">Piet</p>
 				</div>
 				<div class="person">
-					<div class="faceImage" data-person="1">
+					<div class="faceImage">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
 					<p class="names">Karel</p>
 				</div>
 				<div class="person client" id="client">
-					<div class="faceImage" data-person="2">
+					<div class="faceImage">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
 					<p class="names">Henk</p>
 				</div>
 				<div class="person">
-					<div class="faceImage" data-person="3">
+					<div class="faceImage">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
 					<p class="names">Sjon</p>
 				</div>
 				<div class="person">
-					<div class="faceImage" data-person="4">
+					<div class="faceImage">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
 					<p class="names">Rosboss</p>
@@ -144,6 +144,7 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="script/jquery.smoothwheel.js"></script>
+	<!-- // <script src="script/infocontent.js"></script> -->
     <script>
 
         // $(document).ready(function(){
@@ -151,13 +152,8 @@
         // });
 	var nav = document.getElementById("nav");
 	var container = document.getElementById("container");
-	window.addEventListener("resize",navWidth,false);
-	
-	function navWidth(){
-		nav.style.width = container.clientWidth + "px";
-		// console.log(window.innerWidth);
-	}
-	navWidth();
+	nav.style.width = container.clientWidth + "px";
+	console.log()
     </script>
 	// <script src="script/main.js"></script>
 </body>
