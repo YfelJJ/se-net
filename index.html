@@ -40,18 +40,18 @@
 <body>
 	<div id="container">
 		<nav id="nav">
-		<div id="logo"></div>
+		<a href="#container" id="logoLink"><div id="logo"></div></a>
 		<div id="showNavThang">
 			<input type="checkbox" id="showNav" value="true"/>
 			<label for="showNav">&#9776;</label> 
 		</div>
 			<ul>
-				<li class="menuItem first" data-scroll="0" data-kleur=""> Ons Bedrijf </li>
-				<li class="menuItem second" data-scroll="1" data-kleur=""> Ons Werk </li>
-				<li class="menuItem third" data-scroll="2" data-kleur=""> Contact </li>
+				<a class="menuItem first" data-scroll="0" data-kleur="" href="#ourCompany"> Ons Bedrijf </a>
+				<a class="menuItem second" data-scroll="1" data-kleur="" href="#ourWork"> Ons Werk </a>
+				<a class="menuItem third" data-scroll="2" data-kleur="" href="#contact"> Contact </a>
 			</ul>
 		</nav>
-		<div class="contentPart first">
+		<div class="contentPart first" id="ourCompany">
 			<div id="introText">
 			<h1>De klant is onderdeel van het team</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,7 +59,7 @@
 			</div>
 
 		</div>
-		<div class="contentPart second">
+		<div class="contentPart second" id="ourWork">
 			<div id="people">
 				<div class="person">
 					<div class="faceImage" data-person="0">
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 		</div>
-			<div class="contentPart third">
+			<div class="contentPart third" id="contact">
 				<div id="contactForm">
 				<h2>Contact</h2>
 				<p>Neem contact op met Synder voor een afspraak!</p>
@@ -132,7 +132,7 @@
 					<p>Tel: 012-12345678</p>
 					<p class="padLeft">E-mail: mailto@synder.nl</p>
 
-					<a href="http://facebook.com/synder">http://facebook.com/synder</a>
+					<!-- <a href="http://facebook.com/synder">http://facebook.com/synder</a> -->
 				</div>
 				<div id="footer">
 					<h4>Synder &copy; 2014</h4>
@@ -159,6 +159,6 @@
 	}
 	navWidth();
     </script>
-	<!-- // <script src="script/main.js"></script> -->
+	<script src="script/main.js"></script>
 </body>
 </html>
