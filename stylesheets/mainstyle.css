@@ -427,7 +427,7 @@ nav ul li:active{
 	}
 }
 @media(max-width:500px){
-	#showNav{
+	/*#showNav{
 		display: none;
 	}
 	#showNavThang{
@@ -441,16 +441,16 @@ nav ul li:active{
 		z-index: 1;
 		height: 100%;
 		padding-left: 10px;
-		box-shadow: 1px 0 8px;
+		box-shadow: 1px 0 8px;*/
 		/*-webkit-transition:0.3s;*/
-	}
+	/*}
 	nav ul{
 		right: 210px;
 
-	}
+	}*/
 }
 @media (min-width: 501px){
-	#showNavThang{
+	/*#showNavThang{
 		display: none;
 	}
 	nav{
@@ -462,5 +462,155 @@ nav ul li:active{
 		font-size: 20px;
 		display: inline-block;
 		margin: 6px 0 15px 30px;
+	}*/
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 480px) {
+	.contentPart .first{
+		background-size: 50% 50%;
 	}
+	#people{
+		width: 100%;
+		margin:0;
+	}
+	#people .person{
+		float: left;
+		width: 100%;
+		border-bottom:1px solid rgba(0,0,0,0.2);
+		background-color: #1f1f1f;
+	}
+	#subPart{
+		width: 100%;
+		float:left;
+		padding: 0;
+	}
+	#portfolio{
+		width:100%;
+		float:left;
+		margin:0 auto;
+		text-align: center;
+		display: inline-block;
+	}
+	#subPart #portfolio .exampleProject{
+		width: 100%;
+		float:left;
+		margin:0 auto;
+	}
+	#nav{
+		z-index: 2;
+		height: 50px;
+	}
+	#nav ul li{
+		font-size: 14px;
+		padding:0;
+		padding-left:10px;
+		padding-top:2px;
+		float: left;
+	}
+	#nav ul{
+		right:5%;
+	}
+	#showNavThang{
+		display: none;
+	}
+	#logo{
+		left:5%;
+		width: 40%;
+	}
+	#introText h1{
+		font-size: 18px;
+	}
+	#introText p{
+		font-size: 12px;
+	}
+	#contactForm{
+		margin:0;
+		padding:0;
+		top:0;
+	}
+	#maps{
+		top:30px;
+		width:30%;
+		right:80px;
+	}
+	#mapsImg{
+		width: 200px;
+		height: 100px;
+	}
+	#maps p, a{
+		font-size:14px;
+	}
+	#contactForm textarea{
+		width:90%;
+	}
+	#contactForm form{
+		padding-left:10px;
+		margin-top:0;
+	}
+	#contactForm h2{
+		font-size:18px;
+		padding-left:10px;
+		padding-top:10px;
+	}
+	#contactForm p{
+		font-size:14px;
+		padding-left:20px;
+	}
+	.cancelButton, .sendButton{
+		font-size:12px;
+		width: 80px;
+		height: 30px;
+		line-height: 20px;
+		margin-left:10px;
+	}
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5){
+
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+} 
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+
 }
