@@ -85,6 +85,9 @@ body,html{
 	width: 336px;
 }
 #people .person.client{
+	-webkit-transition:1s;
+	-moz-transition:1s;
+	-o-transition:1s;
 	background-color: #0099cc;
 }
 .names{
