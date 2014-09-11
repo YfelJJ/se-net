@@ -106,9 +106,13 @@ body,html{
 	width: 100%;
 
 }
+#showNavThang{
+	display: none;
+}
 nav{
 	background-color: #000;
 	color:white;
+	z-index: 1;
 	/*position: absolute;*/
 	position: fixed;
 	height: 70px;
@@ -135,14 +139,15 @@ nav ul{
 	
 }
 nav ul li{
-	padding: 2px 0 3px 0;
+	padding: 10px 20px 3px 0;
 	font-size: 20px;
 	list-style-type: none;
 	cursor: pointer;
+	float: left;
 	
 }
 nav ul li:hover{
-	padding: 2px 6px 3px 5px;
+	padding: 10px 25px 3px 5px;
 	/*border-left: 2px #005 solid;
 	border-top: 2px #005 solid;*/
 	box-shadow: 2px 2px 1px 0px rgba(0, 5, 0, 0.75);;
@@ -350,6 +355,31 @@ nav ul li:active{
 		padding: 0;
 		font-family: 'Alegreya Sans SC', sans-serif;
 	}
+@media(max-width:1920px){
+/*	#contactForm{
+		margin: 0;
+		width: 50%;
+
+		position: static;
+		float: left;
+		margin: 0;
+		top: auto;
+	}
+	#maps{
+		width: 50%;
+
+		height: auto;
+		position: static;
+		right: auto;
+		float: right;
+		top: auto;
+	}
+	#contactArea{
+		padding-top:10px; 
+		margin: 0 auto;
+		width: 100%;
+	}*/
+}
 /*1366 Resolutie*/
 @media(max-width:1367px){
 	#purple{
@@ -465,7 +495,10 @@ nav ul li:active{
 	}*/
 }
 @media all and (min-width: 1024px) and (max-width: 1280px) {
-
+/*	#people .person{
+		width: 60%;
+		margin:0 auto;
+	}*/
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -477,8 +510,9 @@ nav ul li:active{
 }
 
 @media all and (max-width: 480px) {
-	.contentPart .first{
-		background-size: 50% 50%;
+	.contentPart.first{
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
 	}
 	#people{
 		width: 100%;

@@ -20,6 +20,7 @@
   ================================================== -->
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/mainstyle.css">
+	<link rel="stylesheet" href="stylesheets/newResponsive.css">
 	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500italic' rel='stylesheet' type='text/css'>
 
 	<!--[if lt IE 9]>
@@ -65,31 +66,31 @@
 					<div class="faceImage" data-person="0">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
-					<p class="names">Piet</p>
+					<p class="names">Robbin</p>
 				</div>
 				<div class="person">
 					<div class="faceImage" data-person="1">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
-					<p class="names">Karel</p>
+					<p class="names">Martijn</p>
 				</div>
 				<div class="person client" id="client">
 					<div class="faceImage" data-person="2">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
-					<p class="names">Henk</p>
+					<p class="names">U</p>
 				</div>
 				<div class="person">
 					<div class="faceImage" data-person="3">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
-					<p class="names">Sjon</p>
+					<p class="names">Mitchell</p>
 				</div>
 				<div class="person">
 					<div class="faceImage" data-person="4">
 						<img src="http://placehold.it/160x160" alt="" />
 					</div>
-					<p class="names">Rosboss</p>
+					<p class="names">Osama</p>
 				</div>
 			</div>
 			<div id="subPart">
@@ -110,29 +111,32 @@
 			</div>
 		</div>
 			<div class="contentPart third">
-				<div id="contactForm">
-				<h2>Contact</h2>
-				<p>Neem contact op met Synder voor een afspraak!</p>
-					<form>
-						<input type="text" placeholder="Naam" class="inputText"/>
-						<br>
-						<input type="text" placeholder="Bedrijfnaam" class="inputText"/>
-						<br>
-						<input type="text" placeholder="Onderwerp" class="inputText"/>
-						<br>
-						<textarea rows="4" cols="50" placeholder="Bericht" class="inputText"></textarea><br>
-						<input type="button" class="cancelButton" value="Annuleren" />
-						<input type="submit" class="sendButton" value="Versturen" />
-					</form>
-				</div>
-				<div id="maps">
-					<img src="images/maps.png" id="mapsImg">
-					<p class="padTop">Contactweg 36</p>
-					<p class="padBottom">1014 Amsterdam</p>
-					<p>Tel: 012-12345678</p>
-					<p class="padLeft">E-mail: mailto@synder.nl</p>
+				<div id="contactArea">
+					<div id="contactForm">
+					<h2>Contact</h2>
+					<p>Neem contact op met Synder voor een afspraak!</p>
+						<form method="post" action="mail/mail.php">
+							<input type="text" placeholder="Naam" class="inputText"  name="naam"/>
+							<br>
+							<!-- <input type="text" placeholder="Bedrijfnaam" class="inputText"/> -->
+							<input type="email" placeholder="voorbeeld@domein.nl" class="inputText" name="email"/>
+							<br>
+							<input type="text" placeholder="Onderwerp" class="inputText" name="onderwerp"/>
+							<br>
+							<textarea rows="4" cols="50" placeholder="Bericht" class="inputText" name="bericht"></textarea><br>
+							<input type="button" class="cancelButton" value="Annuleren" />
+							<input type="submit" class="sendButton" value="Versturen" />
+						</form>
+					</div>
+					<div id="maps">
+						<img src="images/maps.png" id="mapsImg">
+						<p class="padTop">Contactweg 36</p>
+						<p class="padBottom">1014 Amsterdam</p>
+						<p>Tel: 012-12345678</p>
+						<p class="padLeft">E-mail: mailto@synder.nl</p>
 
-					<a href="http://facebook.com/synder">http://facebook.com/synder</a>
+						<a href="http://facebook.com/synder">http://facebook.com/synder</a>
+					</div>
 				</div>
 				<div id="footer">
 					<h4>Synder &copy; 2014</h4>
